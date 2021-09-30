@@ -1,7 +1,7 @@
 html {
     background-color: #363636;
-    font-size: 15px; /* px significa "pixels": o tamanho da fonte base é agora de 10 pixels */
-    font-family: "Roboto Mono", monospace; /* este deve ser o nome da fonte que você obteve no Google Fonts */
+    font-size: 15px;
+    font-family: "Roboto Mono", monospace;
     color: azure 
   }
 
