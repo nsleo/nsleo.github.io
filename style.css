@@ -1,8 +1,8 @@
-html {
+* {
     background-color: #363636;
     font-size: 15px;
     font-family: "Roboto Mono", monospace;
-    color: azure 
+    color: MintCream; 
   }
 
 h1 {
