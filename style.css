@@ -15,3 +15,7 @@ p {
     line-height: 2;
     letter-spacing: 1px;
 }
+
+.foto {
+    border: 5px solid mediumseagreen;
+}
