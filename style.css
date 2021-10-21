@@ -1,7 +1,7 @@
 * {
-    background-color: powderblue;
+    background-color: grey;
     font-size: 15px;
-    font-family: "Roboto Mono", monospace;
+    font-family: "Roboto", sans-serif;
     color: black; 
   }
 
@@ -17,5 +17,9 @@ p {
 }
 
 .foto {
-    border: 5px solid MediumAquamarine;
+    border: 5px solid whitesmoke;
+}
+
+.social {
+    font-size: 4rem;
 }
