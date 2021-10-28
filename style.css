@@ -1,5 +1,5 @@
 * {
-    background-color: grey;
+    background-color: palegreen;
     font-size: 15px;
     font-family: "Roboto", sans-serif;
     color: black; 
@@ -22,4 +22,8 @@ p {
 
 .social {
     font-size: 4rem;
+}
+
+.links {
+    box-align: center;
 }
