@@ -1,34 +1,41 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/style2.css">
+  <title>Login</title>
+</head>
+<body onload="mostrarHora()"> <!-- oninput="helloUser()" -->
+  <section class="container">
 
-        <title>My Portofio</title> 
+    <div id="submitName">
+      <p class="flex-item" id="hello">Hello, Human. What's your name?</p>
+      <input id="username" class="flex-item" type="text" autocomplete="off" placeholder=":)">
+      <!-- <button onclick="helloUser()">oi</button> -->
+    </div>
 
-        <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-        <link rel="manifest" href="icons/site.webmanifest">
+    <div id="welcome">
+        <button class="flex-item">
+          <a class="botao" onclick="helloUser();hideButton()">say hi</a>
+        </button>
+    </div>
+    <div id="contin">
+        <button class="flex-item">
+          <a class="botao2" href="index.html">go in</a>
+        </button>
+    </div>
+    
+  </section>  
+</body>
+<footer>
+  
+      <div class="horario">
+        <span id="clock" class="clock">relogio aqui</span>
+      </div>
 
-        <link rel="stylesheet" href="stylelogin.css">
-        <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
-
-        <script crossorigin="anonymous" src="https://kit.fontawesome.com/227c1d0653.js"></script>
-
-    </head>
-    <body>
-
-        <div id="login">
-          <p>Hello, human. What's your name?</p>
-          <input type="text" placeholder=":)">
-          <div>
-            <button>
-              <a href="index.html">home</a>
-            </button>
-          </div>
-        </div>
-        
-    </body>
+</footer>
+<script src="script/script.js"></script>
 </html>
