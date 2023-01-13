@@ -68,6 +68,7 @@ function helloUser() {
   } else {
       userName = document.getElementById('username').value
       document.getElementById('hello').innerText = "Hello, " + formatar() + "! :)"
+      document.getElementById('hello').className = "capitalize"
       // document.getElementById('username').placeholder = ":)"
       document.getElementById('username').disabled = "disabled"
       // document.getElementById('username').readOnly = "readOnly"
