@@ -1,6 +1,10 @@
 function realTime() {
   var refresh=1000; //recarregar em milisegundos
-  mytime=setTimeout('mostrarHora()',refresh)
+  setTimeout('mostrarHora()',refresh) //mytime=
+}
+
+function formatar() {
+  return userName[0].toUpperCase() + userName.slice(1)
 }
 
 function mostrarHora() {
@@ -52,18 +56,21 @@ var nameInfo = ''
 
 function helloUser() {
   userName = document.getElementById('username').value
+
   if (document.getElementById('username').value.length > 15) {
       document.getElementById('hello').innerText = "your name is too big..."
-      document.getElementById('username').placeholder = ":("
+      // document.getElementById('username').placeholder = ":("
       nameInfo = false
   } else if (document.getElementById('username').value.length == 0) {
       document.getElementById('hello').innerText = "type your name!"
-      document.getElementById('username').placeholder = "'-'"
+      // document.getElementById('username').placeholder = "'-'"
       nameInfo = false
   } else {
       userName = document.getElementById('username').value
-      document.getElementById('hello').innerText = "Hello, " + userName + "!"
-      document.getElementById('username').placeholder = ":)"
+      document.getElementById('hello').innerText = "Hello, " + formatar() + "! :)"
+      // document.getElementById('username').placeholder = ":)"
+      document.getElementById('username').disabled = "disabled"
+      // document.getElementById('username').readOnly = "readOnly"
       nameInfo = true
   }
   // document.getElementById('hello').innerText = "Have a great day."
