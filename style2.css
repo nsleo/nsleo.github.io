@@ -53,6 +53,7 @@ div#contin {
 /* input do nome do usuario */
 
 input {
+  width: 201px;
   outline: 0;
   border: none;
   padding: 5px;
@@ -72,7 +73,7 @@ input::placeholder {
 
 button.flex-item {
   padding: 6px;
-  margin-right: 75px;
+  /* margin-right: 75px; */
   border: none;
   border: 1px solid rgb(50, 50, 50);
   box-shadow: 2px 2px 5px rgba(34, 34, 34, 0.481);
