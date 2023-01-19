@@ -114,7 +114,8 @@ input#toggle-theme {
 }
 .switch:hover {
   background-color: #E45826;
-  border: 2px solid #E45826;
+  /* border: 2px solid #E45826; */
+  border: 2px solid var(--color);
 }
 
 input#toggle-theme:checked ~ .switch{
