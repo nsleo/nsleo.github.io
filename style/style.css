@@ -8,6 +8,7 @@
 html {
   --background-color: #1B1A17;
   --color: #E6D5B8;
+  --color_hover: #E6D5B8;
   --cor2: #1B1A17;
   --cor2_transparente: rgba(177, 198, 195, 0.187);
   --destaque: #E45826;
@@ -16,6 +17,7 @@ html {
 html[data-theme="light"] {
   --background-color: #E6D5B8;
   --color: #06011A;
+  --color_hover: #06011ab0;
   --cor2: #E6D5B8;
   --cor2_transparente: rgb(255, 255, 255);
   --destaque: #F0A500;
@@ -75,7 +77,7 @@ a.pages {
 }
 a.pages:hover {
   /* background-color: var(--cor2_transparente); */
-  box-shadow: inset 0px 0px 14px 0.01px var(--color);
+  box-shadow: inset 0px 0px 14px 0.01px var(--color_hover);
   transition: ease-in 0.2s;
 }
 
@@ -108,13 +110,20 @@ input#toggle-theme {
   border-radius: 20px;
   overflow: hidden;
   transition: ease-in 0.3s;
+  border: 2px solid var(--color);
 }
 .switch:hover {
   background-color: #E45826;
+  border: 2px solid #E45826;
 }
 
 input#toggle-theme:checked ~ .switch{
-  background: rgb(255, 255, 255);
+  background: var(--background-color);
+}
+input#toggle-theme:checked ~ .switch:hover {
+  background-color: var(--destaque);
+  border: 2px solid var(--color);
+  color: var(--cor2);
 }
 .fas {
   color: black;
@@ -136,11 +145,8 @@ input#toggle-theme:checked ~ .switch > .fa-moon {
 input#toggle-theme:checked ~ .switch > .fa-sun {
   opacity: 1;
   transform: translateX(3px);
+  /* color: var(--destaque); */
 }
-input#toggle-theme:checked ~ .switch:hover {
-  background-color: var(--destaque);
-}
-
 
 /* footer */
 
