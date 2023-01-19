@@ -1,0 +1,145 @@
+/*         GENERAL RULES        */
+:root {
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* themes functionality */
+html {
+  --background-color: #06011A;
+  --color: rgb(217, 207, 255);
+  --cor2: rgba(103, 88, 123, 0.987);
+  --cor2_transparente: rgba(177, 198, 195, 0.187);
+}
+
+html[data-theme="light"] {
+  --background-color: rgb(217, 207, 255);
+  --color: #06011A;
+  --cor2: rgb(71, 50, 99);
+  --cor2_transparente: rgba(103, 88, 123, 0.494);
+}
+
+
+
+/* scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+/* navigation bar */
+
+
+#nav-bar {
+  position: fixed; 
+  top: 0px; 
+  left: 00px;
+  right: 00px;
+  z-index: 9998; 
+  /* width: 100%;  */
+  /* height: 50px;  */
+  background-color: var(--cor2);
+  display: flex;
+  justify-content: flex-end;
+}
+
+ul {
+  margin: 0px;
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  display: flex;
+  text-decoration: none;
+  color: var(--color);
+  padding: 15px;
+  margin-right: 10px;
+}
+a:hover {
+  background-color: var(--cor2_transparente);
+}
+
+
+
+/* theme toggle */
+
+
+div#themeSwitch {
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  /* top right bottom left */
+  margin: auto auto auto 16px;
+}
+
+input#toggle-theme {
+  -webkit-appearance: none;
+  visibility: hidden;
+  display: none;
+}
+.switch {
+  /* position: relative; */
+  padding: 7px;
+  display: block;
+  width: 50px;
+  height: 18px;
+  background-color: rgb(240, 240, 240);
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: ease-in 0.3s;
+}
+input#toggle-theme:checked ~ .switch{
+  background: rgb(255, 255, 255);
+}
+.fas {
+  color: black;
+  font-size: 19px;
+}
+.fa-sun {
+  transform: translateX(30px);
+  opacity: 0;
+  transition: 0.3s;
+}
+.fa-moon {
+  transform: translateX(5px);
+  transition: 0.3s;
+}
+input#toggle-theme:checked ~ .switch > .fa-moon {
+  opacity: 0;
+  transform: translateX(0px);
+}
+input#toggle-theme:checked ~ .switch > .fa-sun {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+p {
+  /* transition: ease-in 0.7s; */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--color);
+  transition: all 0.3s linear;
+}
+
+section {
+  margin-top: 70px;
+}
+  
+footer {
+  background-color: rgba(107, 150, 136, 0.472);
+  width: 100%;
+  height: 100px;
+}

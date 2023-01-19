@@ -90,3 +90,51 @@ function hideButton() {
     botao2.style.display = "none"
   }
 }
+
+
+
+
+
+
+//theme functionality
+
+
+
+//armazena o botao
+const themeButton = document.getElementById('toggle-theme')
+
+
+//verifica se existe a seleção de theme no localstorage
+if (localStorage.getItem("data-theme") == "light") {
+    themeButton.checked = true
+}
+
+
+//muda o valor do data-theme para dark e guarda no localstorage
+function darkTheme() {
+    document.documentElement.setAttribute("data-theme", "dark")
+    localStorage.setItem("data-theme", "dark")
+}
+
+//muda o valor do data-theme para light e guarda no localstorage
+function lightTheme() {
+    document.documentElement.setAttribute("data-theme", "light")
+    localStorage.setItem("data-theme", "light")
+}
+
+
+//onchange para aplicar a mudança de theme
+themeButton.addEventListener("change",
+    function themeUpdate() {
+        const theme = localStorage.getItem('data-theme')
+        if (themeButton.checked) {
+            lightTheme()
+        } else if (!themeButton.checked) {
+            darkTheme()  
+        }
+    }
+)
+
+//final da lógica
+let theme = localStorage.getItem('data-theme')
+if (theme == 'light') lightTheme()

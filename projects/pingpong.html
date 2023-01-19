@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ping-Pong</title>
+  <style>
+    * {
+      overflow: hidden;
+      margin: 0px;
+      padding: 0px;
+    }
+  </style>
+</head>
+<body>
+  <canvas></canvas>
+  <script>
+    const canvasEl = document.querySelector("canvas"), 
+          canvasCtx = canvasEl.getContext('2d')
+          
+    const lineWidth = 15
+
+    function setup() {
+      canvasEl.width = canvasEl.height = window.innerWidth
+      canvasCtx.width = canvasCtx.height = window.innerWidth
+    }
+
+    function draw() {
+      canvasCtx.fillStyle = "#286047"
+      canvasCtx.fillRect(0, 0, window.innerWidth, window.innerHeight)
+
+
+      canvasCtx.fillStyle = "#ffffff"
+
+      const x = window.innerWidth / 2  - lineWidth / 2
+      const y = 0
+      const w = lineWidth
+      const h = window.innerHeight
+
+      canvasCtx.fillRect(x, y, w, h)
+    }
+    
+    setup()
+    draw()
+  </script>
+</body>
+</html>

@@ -186,7 +186,15 @@ div.frase {
 
 .capitalize {
   text-transform: capitalize;
+  margin: 3px;
+  padding: 3px;
 }
+
+
+/* botao skip */
+
+
+/* responsiveness */
 
 @media (min-width:961px) { /* tablet, landscape iPad, lo-res laptops ands desktops */
   section {
