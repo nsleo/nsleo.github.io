@@ -27,3 +27,13 @@ i.fa-cat:hover {
   /* border: 1px dashed var(--color); */
   border-radius: 15px;
 }
+.dont {
+  width: 175px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.3s;
+  margin-top: 10px;
+  font-style: normal;
+  /* border: 1px dashed var(--color); */
+  border-radius: 15px;
+}
