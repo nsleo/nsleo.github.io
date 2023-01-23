@@ -52,7 +52,7 @@ body {
   display: flex;
   justify-content: flex-end;
   transition: all 0.3s linear;
-  padding: 12px;
+  padding: 18px;
 }
 
 ul {
@@ -105,7 +105,7 @@ input#toggle-theme {
   display: block;
   width: 50px;
   height: 18px;
-  background-color: var(--color);
+  background-color: var(--background-color);
   cursor: pointer;
   border-radius: 20px;
   overflow: hidden;
@@ -127,7 +127,7 @@ input#toggle-theme:checked ~ .switch:hover {
   color: var(--cor2);
 }
 .fas {
-  color: black;
+  color: var(--color);
   font-size: 19px;
 }
 .fa-sun {
@@ -187,17 +187,22 @@ body {
   color: var(--color);
   transition: all 0.3s linear;
   margin: 0;
+  margin-top: 85px;
 }
 
 section {
-  margin: 80px 10px 10px 10px;
+  margin: 10px 10px 10px 10px;
 }
 
-p {
+p, h1, h2, h3, h4 {
   margin: 0;
 }
   
-
+h1, h2, h3, h4 {
+  margin-left: 10px;
+  margin-bottom: 18px;
+  padding-top: 20px;
+}
 
 
 /* responsiveness */

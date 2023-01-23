@@ -17,49 +17,105 @@
   <canvas></canvas>
   <script>
     const canvasEl = document.querySelector("canvas"), 
-          canvasCtx = canvasEl.getContext('2d')
-          
-    const lineWidth = 15
+          canvasCtx = canvasEl.getContext('2d'), 
+          lineWidth = 15,
+          gapX = 10
+
+    const field = {
+      w: window.innerWidth,
+      h: window.innerHeight,
+      draw: function() {
+          // desenha o campo
+        canvasCtx.fillStyle = "#286047"
+        canvasCtx.fillRect(0, 0, this.w, this.h)
+      }
+    }
+
+    const line = {
+      w: 15,
+      h: field.h,
+      draw: function() {
+        // indica a cor do preenchimento dos proximos comandos
+        canvasCtx.fillStyle = "#ffffff"
+
+        // desenha linha central
+        canvasCtx.fillRect(
+          field.w / 2  - this.w / 2, 0, this.w, field.h)
+      }
+    }
+
+    const leftPaddle = {
+      x: gapX,
+      y: 100,
+      w: line.w,
+      h: 200,
+      draw: function() {
+        // indica a cor do preenchimento dos proximos comandos
+        canvasCtx.fillStyle = "#ffffff"
+
+        // desenha a raquete esq
+        canvasCtx.fillRect(this.x, this.y, this.w, this.h)
+      }
+    }
+
+    const rightPaddle = {
+      x: field.w - line.w - gapX,
+      y: 100,
+      w: line.w,
+      h: 200,
+      draw: function() {
+        // indica a cor do preenchimento dos proximos comandos
+        canvasCtx.fillStyle = "#ffffff"
+
+        // desenha a raquete dir
+        canvasCtx.fillRect(this.x, this.y, this.w, this.h)
+      }
+    }
+
+    const ball = {
+      x: 300,
+      y: 200,
+      r: 20,
+      draw: function() {
+        // indica a cor do preenchimento dos proximos comandos
+        canvasCtx.fillStyle = "#ffffff"
+
+        // desenha a bolinha
+        canvasCtx.beginPath()
+        canvasCtx.arc(this.x, this.y, this.r, 0, 2.0 * Math.PI, false)
+        canvasCtx.fill()
+      }
+    }
+
+    const score = {
+      human: 5,
+      computer: 2,
+      draw: function() {
+        // desenha o placar
+        canvasCtx.font = "bold 72px Arial"
+        canvasCtx.textAlign = 'center'
+        canvasCtx.textBaseline = "top"
+        canvasCtx.fillStyle = '#01341D'
+        canvasCtx.fillText(this.human, field.w / 4, 50)
+        canvasCtx.fillText(this.computer, field.w / 4 + field.w / 2, 50)
+      }
+    }
 
     function setup() {
-      canvasEl.width = canvasEl.height = window.innerWidth
-      canvasCtx.width = canvasCtx.height = window.innerWidth
+      canvasEl.width = canvasEl.height = field.w
+      canvasCtx.width = canvasCtx.height = field.w
     }
 
     function draw() {
-      // desenha o campo
-      canvasCtx.fillStyle = "#286047"
-      canvasCtx.fillRect(0, 0, window.innerWidth, window.innerHeight)
+      field.draw()
+      line.draw()
+      
+      leftPaddle.draw() 
+      rightPaddle.draw()
 
-      // indica a cor do preenchimento dos proximos comandos
-      canvasCtx.fillStyle = "#ffffff"
+      score.draw() 
 
-      // desenha linha central
-      canvasCtx.fillRect(
-        window.innerWidth / 2  - lineWidth / 2,
-        0,
-        lineWidth,
-        window.innerHeight
-      )
-
-      // desenha a raquete esq
-      canvasCtx.fillRect(10, 400, lineWidth, 200)
-
-      // desenha a raquete dir
-      canvasCtx.fillRect(window.innerWidth - lineWidth - 10, 120, lineWidth, 200)
-
-      // desenha a bolinha
-      canvasCtx.beginPath()
-      canvasCtx.arc(200, 100, 20, 0, 2.0 * Math.PI, false)
-      canvasCtx.fill()
-
-      // desenha o placar
-      canvasCtx.font = "bold 72px Arial"
-      canvasCtx.textAlign = 'center'
-      canvasCtx.textBaseline = "top"
-      canvasCtx.fillStyle = '#01341D'
-      canvasCtx.fillText('3', window.innerWidth / 4, 50)
-      canvasCtx.fillText('1', window.innerWidth / 4 + window.innerWidth / 2, 50)
+      ball.draw()
     }
     
     setup()
