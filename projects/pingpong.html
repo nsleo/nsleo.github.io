@@ -65,11 +65,21 @@
 
     const rightPaddle = {
       x: field.w - line.w - gapX,
-      y: 100,
+      y: 0,
       w: line.w,
       h: 200,
+      speed: 1,
       _move: function() {
+        if (this.y + this.h / 2 < ball.y + ball.r) {
+          this.y += this.speed
+        } else {
+          this.y -= this.speed
+        }
+
         this.y = ball.y
+      },
+      speedUp: function() {
+        this.speed += 0
       },
       draw: function() {
         // indica a cor do preenchimento dos proximos comandos
@@ -85,7 +95,7 @@
       x: 0,
       y: 0,
       r: 20,
-      speed: 5,
+      speed: 7,
       directionX: 1,
       directionY: 1,
       _calcPosition: function() {
@@ -134,10 +144,11 @@
         this.directionY = this.directionY * -1
       },
       _speedUp: function() {
-        this.speed += 3
+        this.speed += 1.5
       },
       _pointUp: function() {
         this._speedUp()
+        rightPaddle.speedUp()
         
         this.x = field.w / 2
         this.y = field.h / 2 
@@ -161,8 +172,8 @@
     }
 
     const score = {
-      human: 5,
-      computer: 2,
+      human: 0,
+      computer: 0,
       increaseHuman: function() {
         this.human++
       },
