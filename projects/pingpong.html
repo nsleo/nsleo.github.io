@@ -19,7 +19,8 @@
     const canvasEl = document.querySelector("canvas"), 
           canvasCtx = canvasEl.getContext('2d'), 
           lineWidth = 15,
-          gapX = 10
+          gapX = 10,
+          mouse = { x: 0, y:0 }
 
     const field = {
       w: window.innerWidth,
@@ -46,15 +47,19 @@
 
     const leftPaddle = {
       x: gapX,
-      y: 100,
+      y: 0,
       w: line.w,
       h: 200,
+      _move: function() {
+        this.y = mouse.y - this.h / 2
+      },
       draw: function() {
         // indica a cor do preenchimento dos proximos comandos
         canvasCtx.fillStyle = "#ffffff"
 
         // desenha a raquete esq
         canvasCtx.fillRect(this.x, this.y, this.w, this.h)
+        this._move()
       }
     }
 
@@ -63,23 +68,78 @@
       y: 100,
       w: line.w,
       h: 200,
+      _move: function() {
+        this.y = ball.y
+      },
       draw: function() {
         // indica a cor do preenchimento dos proximos comandos
         canvasCtx.fillStyle = "#ffffff"
 
         // desenha a raquete dir
         canvasCtx.fillRect(this.x, this.y, this.w, this.h)
+        this._move()
       }
     }
 
     const ball = {
-      x: 300,
-      y: 200,
+      x: 0,
+      y: 0,
       r: 20,
       speed: 5,
+      directionX: 1,
+      directionY: 1,
+      _calcPosition: function() {
+        // verfica se o J1 fez um ponto (x > width do campo)
+
+        if (this.x > field.w - this.r - rightPaddle.w - gapX) {
+          // verifica se a raquere dir esta na posição y da bola
+          if (this.y + this.r > rightPaddle.y && 
+              this.y - this.r < rightPaddle.y + rightPaddle.h) {
+            // rebate a bola invertendo sinal de X
+            this._reverseX()
+          } else {
+            // ṕontuar J1
+            score.increaseHuman()
+            this._pointUp()
+          }
+        }
+        // verifica as laterais do campo
+        if (
+          (this.y - this.r < 0 && this.directionY < 0) ||
+          (this.y > field.h - this.r && this.directionY > 0)
+          ) {
+            // rebate a bola invertendo o sinal do eixo y
+          this._reverseY()
+        }
+
+        // verfica se o J2/PC fez um ponto (x < 0)
+        if (this.x < this.r + leftPaddle.w + gapX) {
+          // verifica se a raquete esq esta na posição y da bola
+          if (this.y + this.r > leftPaddle.y && 
+              this.y - this.r < leftPaddle.y + leftPaddle.h) {
+            // rebate a bola invertendo sinal de X
+            this._reverseX()
+          } else {
+            score.increaseComputer()
+            this._pointUp()
+          }
+        }
+      },
+      _reverseX: function() {
+        // 1 * -1 = -1
+        // -1 * -1 = -1
+        this.directionX = this.directionX * -1
+      },
+      _reverseY: function() {
+        this.directionY = this.directionY * -1
+      },
+      _pointUp: function() {
+        this.x = field.w / 2
+        this.y = field.h / 2
+      },
       _move: function() {
-        this.x += 1 * this.speed
-        this.y += 1 * this.speed
+        this.x += this.directionX * this.speed
+        this.y += this.directionY * this.speed
       },
       draw: function() {
         // indica a cor do preenchimento dos proximos comandos
@@ -89,6 +149,8 @@
         canvasCtx.beginPath()
         canvasCtx.arc(this.x, this.y, this.r, 0, 2.0 * Math.PI, false)
         canvasCtx.fill()
+
+        this._calcPosition()
         this._move()
       }
     }
@@ -96,6 +158,12 @@
     const score = {
       human: 5,
       computer: 2,
+      increaseHuman: function() {
+        this.human++
+      },
+      increaseComputer: function() {
+        this.computer++
+      },
       draw: function() {
         // desenha o placar
         canvasCtx.font = "bold 72px Arial"
@@ -147,6 +215,11 @@
 
     setup()
     main()
+
+    canvasEl.addEventListener('mousemove', function(e) {
+      mouse.x = e.pageX
+      mouse.y = e.pageY
+    })
   </script>
 </body>
 </html>
