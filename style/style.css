@@ -207,7 +207,7 @@ h1, h2, h3, h4 {
 
 /* responsiveness */
 
-@media (max-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
+@media (max-width:570px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
   nav-bar {
     position: fixed; 
     top: 0px; 
@@ -224,6 +224,7 @@ h1, h2, h3, h4 {
   }
   ul.pagess {
     padding: 3px;
+    margin-left: 45px;
   }
   a {
     display: flex;
@@ -232,7 +233,7 @@ h1, h2, h3, h4 {
     padding: 5px;
     margin-right: 6px;
     margin-top: 3px;
-    font-size: 13px;
+    font-size: 17px;
   }
   a.pages {
     border: 2px solid var(--color);
@@ -244,3 +245,78 @@ h1, h2, h3, h4 {
   }
 }
 
+@media (max-width:500px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
+  nav-bar {
+    position: fixed; 
+    top: 0px; 
+    left: 0px;
+    right: 0px;
+    z-index: 9998; 
+    /* width: 100%;  */
+    /* height: 50px;  */
+    background-color: var(--cor2);
+    display: flex;
+    justify-content: flex-end;
+    transition: all 0.3s linear;
+    padding: 10px;
+  }
+  ul.pagess {
+    padding: 3px;
+    margin-left: 7px;
+  }
+  a {
+    display: flex;
+    text-decoration: none;
+    color: var(--color);
+    padding: 5px;
+    margin-right: 1px;
+    margin-top: 3px;
+    font-size: 12px;
+  }
+  a.pages {
+    border: 2px solid var(--color);
+    border-radius: 5px;
+  }
+  div#themeSwitch {
+    margin: 5px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width:372px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
+  nav-bar {
+    position: fixed; 
+    top: 0px; 
+    left: 0px;
+    right: 0px;
+    z-index: 9998; 
+    /* width: 100%;  */
+    /* height: 50px;  */
+    background-color: var(--cor2);
+    display: flex;
+    justify-content: flex-end;
+    transition: all 0.3s linear;
+    padding: 10px;
+  }
+  ul.pagess {
+    padding: 3px;
+    margin-left: 1px;
+  }
+  a {
+    display: flex;
+    text-decoration: none;
+    color: var(--color);
+    padding: 5px;
+    margin-right: 1px;
+    margin-top: 3px;
+    font-size: 12px;
+  }
+  a.pages {
+    border: 2px solid var(--color);
+    border-radius: 5px;
+  }
+  div#themeSwitch {
+    margin-top: 3px;
+    margin-right: 25px;
+  }
+}
