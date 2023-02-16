@@ -1,0 +1,245 @@
+@keyframes example {
+  from {background: -webkit-linear-gradient(var(--preto), var(--preto))}
+  to {background: -webkit-linear-gradient(var(--branco2), var(--roxoclaro))}
+}
+
+
+:root {
+  --background-color: #212121;
+  --background-light: #323232;
+  --background-colortransparent: #323232bb;
+  --color: #fff;
+  --color_hover: #E6D5B8;
+  --cor2: #fff;
+  --color2: #212121;
+  --destaque: #E45826;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  /* position: relative; */
+  background-color:var(--cor2);
+  color: var(--color2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 20px;
+  width: 500px;
+  height: 300px;
+  /* transition: 0.6s ease-out; */
+}
+
+
+/* bloco 1 da interface */
+
+div#submitName {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div#submitName p {
+  margin: 8px;
+}
+
+/* input do nome do usuario */
+
+input {
+  background-color: #2121214c;
+  font-size: 16px;
+  border-radius: 8px;
+  text-align: center;
+  padding: 4px;
+  margin: 6px;
+  width: 220px;
+}
+
+input::placeholder {
+  font-weight: 600;
+  color: var(--background-color);
+  font-size: 15px;
+}
+
+
+/* bloco 2 da interface */
+
+div#welcome {
+  width: 220px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+div#welcome button {
+  margin: 2px;
+  margin-top: 4px;
+}
+
+a {
+  color: var(--color);
+}
+
+/* botão */
+
+button.flex-item {
+  background-color: var(--background-light);
+  color: var(--color);
+  border-radius: 4px;
+  padding: 8px;
+  /* transition: 0.4s ease; */
+}
+
+button:hover {
+  cursor: pointer; 
+  /* 
+  color: var(--branco);
+  background-color: #06011aa4;
+  */
+}
+
+a.botao {
+  /* 
+  padding: 2px;
+  color: black;
+  color: var(--branco); 
+  */
+}
+
+a.botao2 {
+  /* padding: 5px;
+  color: black;
+  color: var(--branco); */
+}
+
+div#contin {
+  width: 220px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  display: none;
+}
+
+div#contin button {
+  margin: 2px;
+  margin-top: 4px;
+  width: 51px;
+}
+
+
+
+/* itens da interface */
+
+.flex-item {
+  /* margin: 3px;
+  padding: 3px; */
+}
+
+/* textos da interface */
+
+p {
+  /* color: var(--branco);
+  font-weight: 600; */
+}
+
+/* relogio em tempo real */
+
+div.horario {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 8px;
+  font-size: 15px;
+}
+span.clock {
+  /* color: var(--branco);
+  font-family: 'Verdana';
+  font-size: 12px; */
+}
+
+/* frase do dia */
+div.frase {
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 8px;
+  color: var(--branco);
+  font-family: 'Verdana';
+  font-size: 12px;
+  font-style: italic; */
+}
+
+
+/* formatacao do nome em maisculo */
+
+.capitalize {
+  text-transform: capitalize;
+  /* margin: 3px; */
+  /* padding: 3px; */
+}
+
+
+/* botao skip */
+
+
+/* responsiveness */
+
+@media (min-width:200px) {
+  .container {
+    width: 250px;
+  }
+}
+
+@media (min-width:320px)  { /* Mobile */ 
+  .container {
+    width: 300px;
+  }
+}
+
+@media (min-width:481px)  { /* iPads, Tablets */ 
+  .container {
+    width: 350px;
+  }
+}
+
+@media (min-width:769px)  { /* Small screens, Laptops */ 
+  .container {
+    width: 400px;
+  }
+}
+
+@media (min-width:1025px) { /* Desktops, Large screens */ 
+  .container {
+    width: 550px;
+  }
+}
+
+@media (min-width:1201px) { /* Extra large screens, TV + */ 
+  .container {
+    width: 580px;
+  }
+}
+
