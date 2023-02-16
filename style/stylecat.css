@@ -4,6 +4,7 @@ div.cat {
   /* position: relative; */
   text-align: center;
   margin-top: 80px;
+  display: none;
 }
 
 i.fa-cat {
@@ -36,4 +37,43 @@ i.fa-cat:hover {
   font-style: normal;
   /* border: 1px dashed var(--color); */
   border-radius: 15px;
+}
+
+div.photo {
+  display: flex;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 300px;
+  clip-path: circle();
+  filter: grayscale(30%);
+  overflow: hidden;
+  background: grey;
+}
+
+div.aboutme {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* height: 150px; */
+}
+
+div.aboutme p {
+  width: 450px;
+  letter-spacing: 2px;
+}
+
+div.smile {
+  width: 450px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }

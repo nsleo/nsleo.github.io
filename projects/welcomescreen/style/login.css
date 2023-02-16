@@ -66,6 +66,7 @@ div#submitName p {
   margin: 8px;
 }
 
+
 /* input do nome do usuario */
 
 input {
@@ -115,6 +116,7 @@ button.flex-item {
 
 button:hover {
   cursor: pointer; 
+  background-color: var(--background-color);
   /* 
   color: var(--branco);
   background-color: #06011aa4;
