@@ -138,3 +138,21 @@ themeButton.addEventListener("change",
 //final da lógica
 let theme = localStorage.getItem('data-theme')
 if (theme == 'light') lightTheme()
+
+
+
+// menu de navegação
+
+function menuChange() {
+  var menu = document.getElementById("menu")
+  var botao = document.getElementById("menuButton")
+  if (menu.style.display === "inline-block") {
+    menu.style.display = "none"
+    botao.classList.remove("fa-xmark")
+    botao.classList.add("fa-bars")
+  } else {
+    menu.style.display = "inline-block"
+    botao.classList.remove("fa-bars")
+    botao.classList.add("fa-xmark")
+  }
+}
