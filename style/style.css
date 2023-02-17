@@ -7,8 +7,10 @@
 /* themes functionality */
 html {
   --background-color: #1B1A17;
-  --color: #E6D5B8;
-  --color_hover: #E6D5B8;
+  /* --color: #E6D5B8;
+  --color_hover: #E6D5B8; */
+  --color: #fff;
+  --color_hover: #fff;
   --cor2: #1B1A17;
   --cor2_transparente: rgba(177, 198, 195, 0.187);
   --destaque: #E45826;
@@ -19,6 +21,7 @@ html[data-theme="light"] {
   --color: #06011A;
   --color_hover: #06011ab0;
   --cor2: #E6D5B8;
+  /* --cor2: #fff; */
   --cor2_transparente: rgb(255, 255, 255);
   --destaque: #F0A500;
 }
@@ -207,7 +210,7 @@ h1, h2, h3, h4 {
 
 /* responsiveness */
 
-@media (max-width:570px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
+@media (max-width:372px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
   nav-bar {
     position: fixed; 
     top: 0px; 
@@ -224,24 +227,24 @@ h1, h2, h3, h4 {
   }
   ul.pagess {
     padding: 3px;
-    margin-left: 45px;
+    margin-left: 1px;
   }
   a {
     display: flex;
     text-decoration: none;
     color: var(--color);
     padding: 5px;
-    margin-right: 6px;
+    margin-right: 1px;
     margin-top: 3px;
-    font-size: 17px;
+    font-size: 10px;
   }
   a.pages {
     border: 2px solid var(--color);
     border-radius: 5px;
   }
   div#themeSwitch {
-    margin: 5px;
-    margin-right: 20px;
+    margin-top: 3px;
+    margin-right: 30px;
   }
 }
 
@@ -283,7 +286,7 @@ h1, h2, h3, h4 {
   }
 }
 
-@media (max-width:372px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
+@media (max-width:570px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
   nav-bar {
     position: fixed; 
     top: 0px; 
@@ -300,23 +303,23 @@ h1, h2, h3, h4 {
   }
   ul.pagess {
     padding: 3px;
-    margin-left: 1px;
+    margin-left: 45px;
   }
   a {
     display: flex;
     text-decoration: none;
     color: var(--color);
     padding: 5px;
-    margin-right: 1px;
+    margin-right: 6px;
     margin-top: 3px;
-    font-size: 10px;
+    font-size: 17px;
   }
   a.pages {
     border: 2px solid var(--color);
     border-radius: 5px;
   }
   div#themeSwitch {
-    margin-top: 3px;
-    margin-right: 30px;
+    margin: 5px;
+    margin-right: 20px;
   }
 }
