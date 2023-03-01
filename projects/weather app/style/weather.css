@@ -24,6 +24,7 @@ body {
   border-radius: 18px;
   font-family: 'Roboto', sans-serif;
   transition: 0.6s ease-out;
+  box-shadow: 3px 2px 3px 2px #000000;
 }
 
 
@@ -43,6 +44,7 @@ body {
   font-weight: 500;
   text-transform: uppercase;
   padding-left: 32px;
+  margin-left: 2px;
 }
 
 
@@ -56,18 +58,21 @@ body {
 
 .search-box button {
   cursor: pointer;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   color: #06283D;
   background: #dff6ff;
   border-radius: 50%;
-  font-size: 22px;
+  font-size: 21px;
   transition: 0.4s ease;
+  border: 1px solid #06283D;
+  box-shadow: 2px 1px #06283D;
 }
 
 .search-box button:hover {
   color: #fff;
   background: #06283D;
+  box-shadow: none;
 }
 
 .search-box i {
@@ -111,7 +116,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 13px;
 }
 
 .weather-details .humidity, .weather-details .wind {
@@ -192,4 +197,45 @@ body {
 
 img {
   max-width: 450px;
+}
+
+div.converter {
+  margin-top: 10px;
+}
+
+div.converter button {
+  background: #fff;
+  color: #06283D;
+  font-size: 13px;
+  font-weight: 700;
+  width: 24px;
+  height: 22px;
+  margin: 3px;
+  border: 1px solid #06283D;
+  border-radius: 5px;
+  box-shadow: 1px 1px #06283D;
+  transition: 0.4s ease;
+}
+
+div.converter button:hover{
+  cursor: pointer;
+  box-shadow: none;
+  background: #06283D;
+  color: #fff;
+}
+
+@media (max-width:500px) {
+  body {
+    background-color: #DFDBE5;
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");}
+
+  input {
+    background: none;
+  }
+
+  .container {
+    border: none;
+    box-shadow: none;
+    background: #06283d00;
+  }
 }

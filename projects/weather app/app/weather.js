@@ -12,8 +12,8 @@ search.addEventListener('click', () => {
   if (city === '')
     return
 
-  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&
-  units=metric&appid=${APIKey}`).then(response => response.json()).then
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}&
+  units=standard`).then(response => response.json()).then
   (json => {
 
     if (json.cod === '404') {
@@ -54,7 +54,13 @@ search.addEventListener('click', () => {
         image.src = ''
     }
 
-    temperature.innerHTML = `${parseInt(json.main.temp)}<span>K</span>`
+    let kelvin = parseInt(json.main.temp)
+    let farenheit = Math.round(((kelvin - 273.15) * 1.8) + 32)
+    let celsius = Math.round(kelvin - 273.15)
+
+    temperature.innerHTML = `${kelvin}<span>K</span>`
+
+
     description.innerHTML = `${(json.weather[0].description)}`
     humidity.innerHTML = `${(json.main.humidity)}%`
     wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`
@@ -67,6 +73,75 @@ search.addEventListener('click', () => {
 
   })
 })
+
+function convertC() {
+  const APIKey = '39081a08874fe7709061efa987650040'
+  const city = document.querySelector('.search-box input').value
+
+  if (city === '')
+    return
+
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}&
+  units=standard`).then(response => response.json()).then
+  (json => {
+    const image = document.querySelector('.weather-box img')
+    const temperature = document.querySelector('.weather-box .temperature')
+    const description = document.querySelector('.weather-box .description')
+    const humidity = document.querySelector('.weather-details .humidity span')
+    const wind = document.querySelector('.weather-details .wind span')
+    
+    let kelvin = parseInt(json.main.temp)
+    let farenheit = Math.round(((kelvin - 273.15) * 1.8) + 32)
+    let celsius = Math.round(kelvin - 273.15)
+    
+    temperature.innerHTML = `${celsius}<span>C</span>`
+  })}
+  
+function convertF() {
+  const APIKey = '39081a08874fe7709061efa987650040'
+  const city = document.querySelector('.search-box input').value
+
+  if (city === '')
+    return
+
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}&
+  units=standard`).then(response => response.json()).then
+  (json => {
+    const image = document.querySelector('.weather-box img')
+    const temperature = document.querySelector('.weather-box .temperature')
+    const description = document.querySelector('.weather-box .description')
+    const humidity = document.querySelector('.weather-details .humidity span')
+    const wind = document.querySelector('.weather-details .wind span')
+    
+    let kelvin = parseInt(json.main.temp)
+    let farenheit = Math.round(((kelvin - 273.15) * 1.8) + 32)
+    let celsius = Math.round(kelvin - 273.15)
+    
+    temperature.innerHTML = `${farenheit}<span>F</span>`
+  })}
+
+function convertK() {
+  const APIKey = '39081a08874fe7709061efa987650040'
+  const city = document.querySelector('.search-box input').value
+
+  if (city === '')
+    return
+
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}&
+  units=standard`).then(response => response.json()).then
+  (json => {
+    const image = document.querySelector('.weather-box img')
+    const temperature = document.querySelector('.weather-box .temperature')
+    const description = document.querySelector('.weather-box .description')
+    const humidity = document.querySelector('.weather-details .humidity span')
+    const wind = document.querySelector('.weather-details .wind span')
+    
+    let kelvin = parseInt(json.main.temp)
+    let farenheit = Math.round(((kelvin - 273.15) * 1.8) + 32)
+    let celsius = Math.round(kelvin - 273.15)
+    
+    temperature.innerHTML = `${kelvin}<span>K</span>`
+  })}
 
 const obj = {
   "coord":{"lon":-3.7396,"lat":5.2038},
