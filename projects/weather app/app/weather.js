@@ -3,6 +3,7 @@ const search = document.querySelector('.search-box button')
 const weatherBox = document.querySelector('.weather-box')
 const weatherDetails = document.querySelector('.weather-details')
 const error404 = document.querySelector('.not-found')
+const input = document.querySelector('#textInput')
 
 search.addEventListener('click', () => {
 
@@ -70,7 +71,9 @@ search.addEventListener('click', () => {
     weatherBox.classList.add('fadeIn')
     weatherDetails.classList.add('fadeIn')
     container.style.height = '590px'
+    
 
+    convertC()
   })
 })
 
@@ -142,6 +145,21 @@ function convertK() {
     
     temperature.innerHTML = `${kelvin}<span>K</span>`
   })}
+
+
+// Execute when the user presses a key on the keyboard
+input.addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with click
+    document.getElementById("searchInput").click();
+  }
+});
+
+
+
 
 const obj = {
   "coord":{"lon":-3.7396,"lat":5.2038},

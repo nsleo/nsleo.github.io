@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --back-gradient: linear-gradient(145deg, #323232, #727272, #cecdcd);
   --back-glass: rgba(255, 255, 255, 0.06);
   --back-glass2: rgba(255, 251, 251, 0.248);
@@ -79,4 +79,211 @@ div.button {
 i.fa-lightbulb {
   font-size: 20px;
   color: rgba(255, 255, 255, 0.579);
+} */
+
+
+
+
+/* 
+
+body {
+  background: url(../blobYellow.svg);
+  background-attachment: fixed;
+  background-size: cover;
+  transition: 0.3s ease-out;
+}
+
+@media (max-width:500px) {
+  body {
+    background: url(../blob2.svg);
+    background-attachment: fixed;
+    background-size: cover;
+  }
+} */
+
+
+
+
+
+
+
+
+/* GLOBAL RULES */
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --black: #000000;
+  --notblack: rgb(18, 19, 21);
+  --raisin-black: #1e212bff;
+  --raisin-black-2: #252831ff;
+  --gunmetal: #2c2f37ff;
+  --onyx: #393d43ff;
+  --davys-gray: #53595aff;
+  --battleship-gray: #889089ff;
+  --battleship-gray-2: #8e958fff;
+  --battleship-gray-3: #919892ff;
+  --white: #fff;
+  --notwhite: #e1e1e1;
+  --blue: #83a4fa;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  text-decoration: none;
+  font-family: 'Ubuntu', sans-serif;
+  color: var(--white);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  /* display: none; */
+}
+::-webkit-scrollbar-thumb {
+  background: var(--davys-gray);
+  border-radius: 10px;
+}
+
+
+/* ^^^ GLOBAL RULES ^^^ */
+
+
+
+
+
+
+
+/* BODY */
+
+body {
+  background-color: var(--raisin-black);
+}
+
+
+
+
+
+
+
+/* TOP MENU */
+
+div.top-menu {
+  z-index: 9999;
+  background: var(--gunmetal);
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+/* THEME BUTTON */
+
+div.theme-button {
+  margin-left: 22px;
+}
+
+input#toggle-theme {
+  visibility: hidden;
+  display: none;
+}
+
+
+
+/* ANCHORS */
+
+a.int-links {
+  margin-right: 22px;
+}
+
+i.active,a.active,
+a.int-links:hover, a i:hover {
+  color: var(--blue);
+}
+
+/* a.int-links:hover, a i:hover {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: var(--blue);
+  text-decoration-thickness: 2px;
+} */
+
+a.int-links.active:hover {
+  cursor: default;
+  text-decoration: none;
+}
+
+/* CONTAINER */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+section {
+  color: var(--notwhite);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 800px;
+  font-size: 16px;
+}
+
+
+
+
+
+
+/* animations */
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(6%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.animation {
+  transition: 0.3s;
+}
+
+
+
+div.gradient {
+  background: radial-gradient(
+    hsl(100 100% 60%), 
+    hsl(200 100% 60%) 
+  ) fixed;
+  background: conic-gradient(
+    hsl(100 100% 60%), 
+    hsl(200 100% 60%), 
+    hsl(100 100% 60%) 
+  ) fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

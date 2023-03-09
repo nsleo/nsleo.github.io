@@ -1,33 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style/new.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+
+  <script defer src="https://kit.fontawesome.com/227c1d0653.js" crossorigin="anonymous"></script>
+  
+  <script defer src="app.js"></script>
+
   <title>Document</title>
 </head>
+
 <body>
-  <div class="top">
-    <div class="button">
-      <i class="fa-regular fa-lightbulb"></i>
-    </div>
-  </div>
 
-  </div>
-  <div class="container">
-    <div class="content">
-      
-    </div>
-  </div>
+  <div class="top-menu">
 
-  <!-- <div class="bot">
-    <div class="social-links">
-      <a href="">
-        <i class="fa-brands fa-github"></i>
+    <div class="theme-button">
+      <label>
+        <input type="checkbox" name="toggle-theme" id="toggle-theme">
+        <span class="switch">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </span>
+      </label>
+    </div>
+
+    <div class="menu-links">
+
+      <a class="int-links animation active" href="#about">
+        ABOUT ME
       </a>
-    </div> -->
+
+      <a class="int-links animation active" href="#projects">
+        PROJECTS
+      </a>
+
+      <a class="int-links animation active" href="#contact">
+        CONTACT
+      </a>
+
+      <a class="int-links animation active" href="#home">
+        <i class="fa-solid fa-house animation"></i>
+      </a>
+
+    </div>
+
   </div>
+
+  <div class="container">
+    <section id="home" class="hidden"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum orci a sapien
+      imperdiet maximus. Suspendisse vel ex eget mauris efficitur finibus eu a enim. Aenean tellus neque, consectetur sit
+      amet lacus a, hendrerit ornare urna. Fusce venenatis lorem vitae augue suscipit, eu tempor massa vulputate. Praesent
+      iaculis velit libero, vel faucibus sem pulvinar vel. Curabitur viverra nisl dui, a venenatis felis pellentesque id.
+      Donec non lacus diam.</section>
+  
+    <section id="about" class="hidden"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum orci a sapien
+      imperdiet maximus. Suspendisse vel ex eget mauris efficitur finibus eu a enim. Aenean tellus neque, consectetur sit
+      amet lacus a, hendrerit ornare urna. Fusce venenatis lorem vitae augue suscipit, eu tempor massa vulputate. Praesent
+      iaculis velit libero, vel faucibus sem pulvinar vel. Curabitur viverra nisl dui, a venenatis felis pellentesque id.
+      Donec non lacus diam.</section>
+  
+    <section id="projects" class="hidden"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum orci a sapien
+      imperdiet maximus. Suspendisse vel ex eget mauris efficitur finibus eu a enim. Aenean tellus neque, consectetur sit
+      amet lacus a, hendrerit ornare urna. Fusce venenatis lorem vitae augue suscipit, eu tempor massa vulputate. Praesent
+      iaculis velit libero, vel faucibus sem pulvinar vel. Curabitur viverra nisl dui, a venenatis felis pellentesque id.
+      Donec non lacus diam.</section>
+  
+    <section id="contact" class="hidden"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum orci a sapien
+      imperdiet maximus. Suspendisse vel ex eget mauris efficitur finibus eu a enim. Aenean tellus neque, consectetur sit
+      amet lacus a, hendrerit ornare urna. Fusce venenatis lorem vitae augue suscipit, eu tempor massa vulputate. Praesent
+      iaculis velit libero, vel faucibus sem pulvinar vel. Curabitur viverra nisl dui, a venenatis felis pellentesque id.
+      Donec non lacus diam.</section>
+  </div>
+
 </body>
-<script src="https://kit.fontawesome.com/227c1d0653.js" crossorigin="anonymous"></script>
+
 </html>

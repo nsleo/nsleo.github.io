@@ -61,7 +61,7 @@ body {
   width: 45px;
   height: 45px;
   color: #06283D;
-  background: #dff6ff;
+  background: #ffffff;
   border-radius: 50%;
   font-size: 21px;
   transition: 0.4s ease;
@@ -166,7 +166,7 @@ body {
 }
 
 .not-found img {
-  width: 70%;
+  width: 55%;
 }
 
 .not-found p {
@@ -227,7 +227,8 @@ div.converter button:hover{
 @media (max-width:500px) {
   body {
     background-color: #DFDBE5;
-    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");}
+    background-image: url("../images/stacked-waves-haikei\ \(1\).svg");
+  }
 
   input {
     background: none;
@@ -236,6 +237,9 @@ div.converter button:hover{
   .container {
     border: none;
     box-shadow: none;
-    background: #06283d00;
+    background-color: rgb(255, 251, 251);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.56);
+    /* background-attachment: fixed; */
+    background-size: cover;
   }
 }
