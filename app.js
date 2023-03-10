@@ -68,6 +68,12 @@ sections.forEach((el) => observerA.observe(el))
 
 // THEME FUNCTIONALITY
 
+//sun
+let sun = document.querySelector("i.fa-moon")
+
+//moon
+let moon = document.querySelector("i.fa-moon")
+
 // get theme button
 const themeSwitch = document.querySelector("input#toggle-theme")
 // get label area
@@ -97,12 +103,16 @@ themeSwitch.addEventListener("change", () => {
   // console.log("listening")
   if (themeSwitch.checked) {
     toDark()
-    
+    // moon.classList.remove("activeTheme")
+    // sun.classList.add("activeTheme")
+
     // const moon = document.querySelector("i.fas fa-moon")
     // moon.style.display = "none"
-
+    
   } else {
     toLight()
+    // sun.classList.remove("activeTheme")
+    // moon.classList.add("activeTheme")
   }
   console.log(localStorage.getItem('data-theme'))
 })

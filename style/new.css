@@ -127,8 +127,8 @@ html {
   --battleship-gray-3: #919892ff;
   --white: #fff;
   --notwhite: #e1e1e1;
-  --blue: #83a4fa;
-  --green: #78db78;
+  --blue: #4f72ff;
+  --green: #4fff4f;
 }
 
 html[data-theme="dark"] {
@@ -188,6 +188,12 @@ html[data-theme="light"] {
 
 body {
   background-color: var(--backgroundMain);
+  display: flex;
+  /* flex-direction: row;
+  align-items: center;
+  justify-content: center; */
+  justify-content: center;
+  /* width: 100%; */
 }
 
 
@@ -199,18 +205,37 @@ body {
 /* TOP MENU */
 
 div.top-menu {
-  margin-top: 10px;
+  /* margin-top: 10px; */
   z-index: 9999;
-  background: var(--menuColor);
+  /* background: var(--menuColor); */
   position: fixed;
   left: 0;
   right: 0;
   display: flex;
   justify-content: space-between;
-  padding: 16px;
+  padding: 10px;
   font-size: 14px;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
+  padding-top: 18px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+div.top-menu div.menu-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.top-menu div.theme-button, 
+div.top-menu div.menu-links {
+  background: var(--menuColor);
+}
+
+div.top-menu div.theme-button i, 
+div.top-menu div.menu-links a{
+  padding: 10px;
 }
 
 /* THEME BUTTON */
@@ -221,6 +246,11 @@ div.theme-button {
 
 div.theme-button i {
   font-size: 20px;
+  /* padding: 5px; */
+}
+
+div.theme-button i:hover {
+  cursor: pointer;
 }
 
 input#toggle-theme {
@@ -252,7 +282,7 @@ a.int-links {
 div.theme-button i:hover,
 i.active,a.active,
 a.int-links:hover, a i:hover {
-  color: var(--anchorColorHover);
+  color: var(--highlight);
 }
 
 /* a.int-links:hover, a i:hover {
@@ -260,21 +290,33 @@ a.int-links:hover, a i:hover {
   text-decoration-style: solid;
   text-decoration-color: var(--blue);
   text-decoration-thickness: 2px;
-} */
+} */  
 
 a.int-links.active:hover {
   cursor: default;
   text-decoration: none;
-}
+}  
 
 /* CONTAINER */
+
+
+div.main-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}  
 
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
-}
+  /* width: 50%; */
+  /* overflow: hidden; */
+  /* position: relative; */
+}  
 
 
 section {
@@ -284,9 +326,51 @@ section {
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 800px;
+  /* width: 100vh; */
   font-size: 16px;
+}  
+
+
+/* SECTIONS */
+
+section#home {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  margin-left: 100px;
+  margin-right: 100px;
 }
+
+section#home div.hello {
+  text-align: start;
+}
+
+#home .small {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--highlight);
+  letter-spacing: 3px;
+  margin-left: 3.5px;
+}
+
+#home .medium {
+  font-size: 18px;
+  letter-spacing: 3px;
+  word-spacing: 3px;
+  margin-left: 3.5px;
+}
+
+#home .big {
+  font-size: 60px;
+  line-height: 55px;
+  letter-spacing: 3px;
+}
+
+#home .big span {
+  font-size: 40px;
+}
+
 
 /* ROUND PHOTO */
 
@@ -299,23 +383,17 @@ img {
   border: 5px solid var(--highlight);
   border-radius: 50%;
   /* transition: 0.4s ease; */
-}
+}  
 
 
 /* SIDE CONTENT */
 
-div.main-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
 
 div.right-side, div.left-side {
   bottom: 0;
   position: fixed;
   width: 100px;
-}
+}  
 
 div.right-side {
   right: 0;
@@ -323,28 +401,32 @@ div.right-side {
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  font-weight: 100;
+  font-weight: 400;
   -webkit-writing-mode: vertical-rl;
   writing-mode: vertical-rl;  
   width: 90px;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  padding: 5;
   /* margin: -10px (compensate the scroller area) */
-}
+}  
 
 div.left-side {
+  z-index: 1;
   left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-}
+}  
 
 div.left-side li {
   margin-bottom: 30px;
   font-size: 20px;
-}
+}  
 
-
-
-
+a.links i {
+  padding: 5px;
+}  
 
 
 
@@ -367,9 +449,28 @@ div.left-side li {
   transition: 0.3s;
 }
 
-.top-menu, body {
+.top-menu, .menu-button, div.top-menu div.theme-button, .menu-links,  body {
   transition: all 0.2s;
 }
+
+
+.fa-sun {
+  transform: translateX(10px);
+  transition: 0.3s;
+  filter: blur(5px);
+}
+.fa-moon {
+  transform: translateX(10px);
+  transition: 0.3s;
+  filter: blur(5px);
+}
+
+.activeTheme {
+  transform: translateX(0);
+  filter: blur(0);
+}
+
+
 
 div.gradient {
   background: radial-gradient(

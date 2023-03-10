@@ -28,8 +28,8 @@
       <label>
         <input type="checkbox" name="toggle-theme" id="toggle-theme">
         <span class="switch">
-            <i class="fas fa-sun"></i>
-            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun activeTheme"></i>
+            <i class="fas fa-moon activeTheme"></i>
         </span>
       </label>
     </div>
@@ -61,9 +61,11 @@
   <div class="left-side">
     <div id="socials">
       <ul class="links">
-          <li><a target="_blank" rel=”noopener” href="https://www.instagram.com/n.s.leo/" class="links">
+          <li>
+            <a target="_blank" rel=”noopener” href="https://www.instagram.com/n.s.leo/" class="links">
               <i target="_blank" rel=”noopener” class="fa fa-brands fa-instagram"></i>
-          </a></li>
+            </a>
+          </li>
           <li><a target="_blank" rel=”noopener” href="https://twitter.com/Leotelho" class="links">
               <i class="fa fa-brands fa-twitter"></i>
           </a></li>
@@ -81,9 +83,13 @@
 
     <section id="home" class="hidden">
 
-      <p class="small">Hi, my name is</p>
-      <p class="big">Leonardo Nunes,</p>
-      <p>I build a better world with front-end in the web</p>
+      <div class="hello">
+
+        <p class="small">Hi, my name is</p>
+        <p class="big">Leonardo Nunes<span>,</span></p>
+        <p class="medium">I build a better world with front-end in the web</p>
+        
+      </div>
 
     </section>
   
@@ -91,7 +97,7 @@
     <section id="about" class="hidden">
 
       <div class="photo">
-        <img src="/resources/euredondo.png" alt="">
+        <!-- <img src="/resources/euredondo.png" alt=""> -->
       </div>
 
       <div class="aboutme">
