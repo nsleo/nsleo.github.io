@@ -128,15 +128,17 @@ html {
   --white: #fff;
   --notwhite: #e1e1e1;
   --blue: #83a4fa;
+  --green: #78db78;
 }
 
 html[data-theme="dark"] {
   --backgroundMain: var(--raisin-black);
   --fontMain: var(--white);
   --scrollColor: var(--davys-gray);
-  --menuColor: var(--gunmetal);
+  --menuColor: var(--raisin-black);
   --anchorColorHover: var(--blue);
   --sectionColor: var(--notwhite);
+  --highlight: var(--green);
 }
 html[data-theme="light"] {
   --backgroundMain: var(--notwhite);
@@ -145,6 +147,7 @@ html[data-theme="light"] {
   --menuColor: var(--notwhite);
   --anchorColorHover: var(--blue);
   --sectionFontColor: var(--notblack);
+  --highlight: var(--blue);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
@@ -156,6 +159,7 @@ html[data-theme="light"] {
   border: 0;
   outline: none;
   text-decoration: none;
+  list-style: none;
   font-family: 'Ubuntu', sans-serif;
   color: var(--fontMain);
 }
@@ -195,6 +199,7 @@ body {
 /* TOP MENU */
 
 div.top-menu {
+  margin-top: 10px;
   z-index: 9999;
   background: var(--menuColor);
   position: fixed;
@@ -212,6 +217,10 @@ div.top-menu {
 
 div.theme-button {
   margin-left: 22px;
+}
+
+div.theme-button i {
+  font-size: 20px;
 }
 
 input#toggle-theme {
@@ -232,12 +241,15 @@ input#toggle-theme:checked ~ span.switch > .fa-sun {
 }
 
 
+
 /* ANCHORS */
 
 a.int-links {
   margin-right: 22px;
 }
 
+
+div.theme-button i:hover,
 i.active,a.active,
 a.int-links:hover, a i:hover {
   color: var(--anchorColorHover);
@@ -275,6 +287,61 @@ section {
   width: 800px;
   font-size: 16px;
 }
+
+/* ROUND PHOTO */
+
+img {
+  width: 350px;
+  clip-path: circle();
+  filter: grayscale(30%);
+  overflow: hidden;
+  background: grey;
+  border: 5px solid var(--highlight);
+  border-radius: 50%;
+  /* transition: 0.4s ease; */
+}
+
+
+/* SIDE CONTENT */
+
+div.main-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+div.right-side, div.left-side {
+  bottom: 0;
+  position: fixed;
+  width: 100px;
+}
+
+div.right-side {
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 100;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;  
+  width: 90px;
+  /* margin: -10px (compensate the scroller area) */
+}
+
+div.left-side {
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.left-side li {
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
 
 
 
