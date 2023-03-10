@@ -130,6 +130,23 @@ html {
   --blue: #83a4fa;
 }
 
+html[data-theme="dark"] {
+  --backgroundMain: var(--raisin-black);
+  --fontMain: var(--white);
+  --scrollColor: var(--davys-gray);
+  --menuColor: var(--gunmetal);
+  --anchorColorHover: var(--blue);
+  --sectionColor: var(--notwhite);
+}
+html[data-theme="light"] {
+  --backgroundMain: var(--notwhite);
+  --fontMain: var(--notblack);
+  --scrollColor: var(--blue);
+  --menuColor: var(--notwhite);
+  --anchorColorHover: var(--blue);
+  --sectionFontColor: var(--notblack);
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
@@ -140,7 +157,7 @@ html {
   outline: none;
   text-decoration: none;
   font-family: 'Ubuntu', sans-serif;
-  color: var(--white);
+  color: var(--fontMain);
 }
 
 ::-webkit-scrollbar {
@@ -150,7 +167,7 @@ html {
   /* display: none; */
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--davys-gray);
+  background: var(--scrollColor);
   border-radius: 10px;
 }
 
@@ -166,7 +183,7 @@ html {
 /* BODY */
 
 body {
-  background-color: var(--raisin-black);
+  background-color: var(--backgroundMain);
 }
 
 
@@ -179,7 +196,7 @@ body {
 
 div.top-menu {
   z-index: 9999;
-  background: var(--gunmetal);
+  background: var(--menuColor);
   position: fixed;
   left: 0;
   right: 0;
@@ -202,6 +219,17 @@ input#toggle-theme {
   display: none;
 }
 
+input#toggle-theme:not(:checked) ~ span.switch > .fa-moon {
+  opacity: 0;
+  display: none;
+  visibility: hidden;
+}
+
+input#toggle-theme:checked ~ span.switch > .fa-sun {
+  opacity: 0;
+  display: none;
+  visibility: hidden;
+}
 
 
 /* ANCHORS */
@@ -212,7 +240,7 @@ a.int-links {
 
 i.active,a.active,
 a.int-links:hover, a i:hover {
-  color: var(--blue);
+  color: var(--anchorColorHover);
 }
 
 /* a.int-links:hover, a i:hover {
@@ -238,7 +266,7 @@ a.int-links.active:hover {
 
 
 section {
-  color: var(--notwhite);
+  color: var(--sectionFontColor);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -272,7 +300,9 @@ section {
   transition: 0.3s;
 }
 
-
+.top-menu, body {
+  transition: all 0.2s;
+}
 
 div.gradient {
   background: radial-gradient(
