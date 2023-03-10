@@ -97,6 +97,10 @@ themeSwitch.addEventListener("change", () => {
   // console.log("listening")
   if (themeSwitch.checked) {
     toDark()
+    
+    // const moon = document.querySelector("i.fas fa-moon")
+    // moon.style.display = "none"
+
   } else {
     toLight()
   }
