@@ -395,8 +395,9 @@ div.photo {
 }
 
 section#about img {
-  background: var(--highlightLight);
-  filter: grayscale(75%);
+  background: var(--notblack);
+  background: linear-gradient(326deg, rgba(30,33,43,1) 0%, rgba(57,61,67,1) 35%, rgba(79, 255, 79, 0.811) 75%);
+  /* filter: grayscale(70%); */
 }
 
 
@@ -405,14 +406,32 @@ section#about img {
 img {
   width: 350px;
   clip-path: circle();
-  filter: grayscale(30%);
+  /* filter: grayscale(30%); */
   overflow: hidden;
-  background: grey;
+  /* background: grey; */
   border: 5px solid var(--highlight);
   border-radius: 50%;
   /* transition: 0.4s ease; */
 }  
 
+/* projects */
+
+section#projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+div.projects {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* contact */
 
 /* SIDE CONTENT */
 
