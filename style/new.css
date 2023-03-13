@@ -128,7 +128,9 @@ html {
   --white: #fff;
   --notwhite: #e1e1e1;
   --blue: #4f72ff;
+  --blueLight: #4f72ff18;
   --green: #4fff4f;
+  --greenLight: #87ff871a;
 }
 
 html[data-theme="dark"] {
@@ -139,6 +141,7 @@ html[data-theme="dark"] {
   --anchorColorHover: var(--blue);
   --sectionColor: var(--notwhite);
   --highlight: var(--green);
+  --highlightLight: var(--greenLight);
 }
 html[data-theme="light"] {
   --backgroundMain: var(--notwhite);
@@ -148,6 +151,7 @@ html[data-theme="light"] {
   --anchorColorHover: var(--blue);
   --sectionFontColor: var(--notblack);
   --highlight: var(--blue);
+  --highlightLight: var(--blueLight);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
@@ -411,6 +415,17 @@ div.right-side {
   /* margin: -10px (compensate the scroller area) */
 }  
 
+div.right-side a {
+  cursor: pointer;
+  padding: 3px;
+  border: 1px solid var(--highlight);
+  border-radius: 5px;
+}
+
+div.right-side a:hover {
+  background: var(--highlightLight);
+}
+
 div.left-side {
   z-index: 1;
   left: 0;
@@ -449,8 +464,8 @@ a.links i {
   transition: 0.3s;
 }
 
-.top-menu, .menu-button, div.top-menu div.theme-button, .menu-links,  body {
-  transition: all 0.2s;
+div.top-menu div.theme-button, .menu-links,  body,  a.int-links{
+  transition: all 0.4s;
 }
 
 
@@ -470,6 +485,15 @@ a.links i {
   filter: blur(0);
 }
 
+/* side content */
+
+a.links i {
+  transition: all 0.5s;
+}
+
+div.right-side a {
+  transition: all 0.5s;
+}
 
 
 div.gradient {
