@@ -435,57 +435,72 @@ div.projects {
 /* contact */
 
 section#contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-div.contact {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 80%; */
-}
-
-section#contact form {
-  width: 60vh;
-  height: 20vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-div.formtop {
-  width: 100%;
-  padding: 6px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-div.formtop input {
-  padding: 4px;
-}
-
-div.formbot {
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactForm {
+  border: 1px solid var(--highlight);
+  border-radius: 5px;
+  padding: 20px;
+  /* width: 50%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* height: 50%; */
+}
+
+.contactForm p {
+  margin: 15px;
+  font-size: 20px;
 }
 
 
-div.formbot input {
+div.form {
   width: 100%;
-  height: 100%;
-  padding: 4px;
+  /* border: 1px solid white; */
 }
 
-form#contactme input {
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form input, textarea {
+  border: 1px solid var(--highlightLight);
+  background: var(--notwhite);
+  border-radius: 3px;
+  padding: 8px;
   color: var(--black);
-  border-radius: 4px;
+  width: 300px;
+  margin: 5px;
+}
+
+form input::placeholder, textarea::placeholder {
+  /* color: var(--notblack); */
+}
+
+textarea {
+  height: 50px;
+}
+
+input.submit {
+  margin-top: 20px;
+  width: 80px;
+  border: 1px solid var(--highlight);
+  cursor: pointer;
+  background: none;
+  color: var(--fontMain);
+}
+
+input.submit:hover {
+  background: var(--highlightLight);
 }
 
 /* SIDE CONTENT */
@@ -547,7 +562,7 @@ a.links i {
 
 .hidden {
   opacity: 0;
-  filter: blur(5px);
+  filter: blur(2px);
   transform: translateY(6%);
   transition: all 1s;
 }
