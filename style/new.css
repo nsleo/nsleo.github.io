@@ -175,7 +175,7 @@ html[data-theme="light"] {
   /* display: none; */
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--scrollColor);
+  background: var(--highlight);
   border-radius: 10px;
 }
 
@@ -396,7 +396,7 @@ div.photo {
 
 section#about img {
   background: var(--notblack);
-  background: linear-gradient(326deg, rgba(30,33,43,1) 0%, rgba(57,61,67,1) 35%, rgba(79, 255, 79, 0.811) 75%);
+  background: linear-gradient(326deg, rgba(30,33,43,1) 0%, rgba(57,61,67,1) 35%, var(--highlight));
   /* filter: grayscale(70%); */
 }
 
@@ -425,13 +425,68 @@ section#projects {
 }
 
 div.projects {
-  width: 80%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
+  width: 80%;
 }
 
 /* contact */
+
+section#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+div.contact {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%; */
+}
+
+section#contact form {
+  width: 60vh;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+div.formtop {
+  width: 100%;
+  padding: 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+div.formtop input {
+  padding: 4px;
+}
+
+div.formbot {
+  width: 100%;
+  height: 100%;
+}
+
+
+div.formbot input {
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+}
+
+form#contactme input {
+  color: var(--black);
+  border-radius: 4px;
+}
 
 /* SIDE CONTENT */
 
