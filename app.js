@@ -122,3 +122,14 @@ themeSwitch.addEventListener("change", () => {
 // get final info and apply
 let theme = localStorage.getItem('data-theme')
 if (theme == 'dark') toDark()
+
+
+// preloader
+
+const loader = document.querySelector("div#preloader")
+const hideScroll = document.querySelector("html")
+
+window.addEventListener("load", () => {
+  loader.style.display = "none"
+  hideScroll.style.overflow = 'visible';
+})
