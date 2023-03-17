@@ -48,7 +48,8 @@ let observerA = new IntersectionObserver((entries, observer) => {
       activedIcon.classList.remove("active")
     }}
   })}, {
-  rootMargin:"-5% 0% -95% 0%",
+  // rootMargin:"-5% 0% -95% 0%",
+  threshold: 0.5,
 })
 
 sections.forEach((el) => observerA.observe(el))
