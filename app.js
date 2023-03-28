@@ -68,7 +68,6 @@ sections.forEach((el) => observerA.observe(el))
 //   })
 // })
 
-
 // THEME FUNCTIONALITY
 
 //sun

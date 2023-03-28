@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+  <script defer src="https://kit.fontawesome.com/227c1d0653.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+  <div class="content">
+
+  <div class="title">
+    <h1>Password Generator</h1>
+    
+    <p class="subtitle">
+      Use this to generate a strong password.
+    </p>
+  </div>
+    
+  
+  <div class="display">
+
+    <div class="wrapper">
+
+      <input type="text" name="password" id="password" disabled>
+
+      <div class="buttons">
+        <button id="copy2">
+          <i class="fa-regular fa-clone"></i>
+        </button>
+        <button id="regen">
+          <i class="fa-solid fa-repeat"></i>
+        </button>
+      </div>
+      
+      
+    </div>
+
+    <div class="indicator">
+      <div class="bar" class="bar" style="width: 60%"></div>
+    </div>
+      
+  </div>
+
+
+    
+  <div id="customizeTitleDiv">
+    <span id="customizeTitle">Customize:</span>
+  </div>
+
+  <div class="customize">
+    
+
+    <div class="size">
+      <p>Size: <span id="customSize">16</span></p>
+      <input type="range" name="password-length" id="password-length" value="16" min="4" max="64">
+    </div>
+
+    <div class="actions">
+      <label class="checkbox">
+        <span class="text">Uppercase</span>
+        <input class="upp" type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+      <label class="checkbox">
+        <span class="text">Numbers</span>
+        <input class="num" type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+      <label class="checkbox">
+        <span class="text">Symbols</span>
+        <input class="sym" type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+
+  </div>
+
+
+  <div id="copyButton">
+    <button id="copy">Copy Password</button>
+    <span class="alert">
+      Password copied.
+    </span>
+  </div>
+
+  <!-- <p class="madeby">by <a href="nsleo.github.io">Leo</a></p> -->
+  </div>
+
+</body>
+</html>

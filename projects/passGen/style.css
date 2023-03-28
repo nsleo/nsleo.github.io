@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --green: #4fff4f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: 0;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Archivo', sans-serif;
+  color: var(--green);
+  color: white;
+  background-color: #0f0f0f;
+}
+
+
+div.content {
+  width: 80%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #0f0f0f;
+  border: 1px solid rgba(255, 255, 255, 0.327);
+  border-radius: 10px;
+}
+
+div.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+div.display {
+  width: 80%;
+  max-width: 700px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+p.subtitle {
+  margin-bottom: 80px;
+}
+
+div.wrapper {
+  padding: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.327);
+  border-radius: 8px;
+  background: #3d3d3d44;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.buttons {
+  display: flex;
+}
+
+input#password {
+  width: 80%;
+  padding: 1px;
+  margin-left: 4px;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  font-size: 30px;
+  background: none;
+}
+
+input#password.fontSS {
+  font-size: 11px;
+}
+input#password.fontS {
+  font-size: 15px;
+}
+input#password.fontX {
+  font-size: 20px;
+}
+input#password.fontXX {
+  font-size: 30px;
+}
+
+div.display button {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.327);
+  padding: 10px;
+  border-radius: 3px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  margin-left: 4px;
+}
+div.display button:hover {
+  background: rgba(255, 255, 255, 0.119);
+}
+
+div.indicator {
+  height: 10px;
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.327);
+  /* border-radius: 8px; */
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+div.indicator .bar {
+  height: 10px;
+  width: 90px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition: all 0.2s;
+}
+
+div.indicator .bar.completed {
+  border-bottom-right-radius: 0;
+}
+div.indicator .bar.critical {
+  background-color: #da5757;
+}
+div.indicator .bar.warning {
+  background-color: #dad857;
+}
+div.indicator .bar.safe {
+  background-color: var(--green);
+}
+div.indicator .bar.golden {
+  background-image: linear-gradient(
+    to right,
+  #462523 0,
+  #cb9b51 22%, 
+  #f6e27a 45%,
+  #f6f2c0 50%,
+  #f6e27a 55%,
+  #cb9b51 78%,
+  #462523 100%
+  );
+  border-radius: 0;
+}
+
+div#customizeTitleDiv {
+  font-weight: 600;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  width: 75%;
+  max-width: 700px;
+}
+div#customizeTitleDiv span {
+  font-size: 20px;
+}
+
+div.customize {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 75%;
+  max-width: 650px;
+}
+
+div.size {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  width: 65%;
+}
+
+div.size p {
+  margin-top: 20px;
+}
+
+div.size input {
+  appearance: none;
+  margin-top: 13px;
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.327);
+  border-radius: 10px;
+}
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  appearance: none;
+  background-color: var(--green);
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+}
+
+div.actions {
+  /* left-margin: 20px; */
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+span.text {
+  margin-top: 3px;
+}
+
+div.actions .checkbox {
+  display: flex;
+  position: relative;
+  padding-left: 34px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+div.actions input {
+  position: absolute;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+div.actions .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #c3c3c3;
+  border-radius: 3px;
+  transition: all 0.2s;
+}
+
+div.actions .checkbox:hover input ~ .checkmark {
+  background-color: #9a9999;
+}
+div.actions .checkbox input:checked ~ .checkmark {
+  background-color: var(--green);
+}
+div.actions .checkbox:hover input:checked ~ .checkmark {
+  background-color: #9a9999;
+}
+
+
+div#copyButton {
+  width: 80%;
+  max-width: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+div#copyButton button {
+  /* width: 30px; */
+  margin-top: 50px;
+  background: var(--green);
+  border: none;
+  border-radius: 3px;
+  padding: 7px;
+  cursor: pointer;
+}
+div#copyButton button:hover {
+  background: var(--green);
+}
+
+span.alert {
+  /* display: none; */
+  /* opacity: 0; */
+  visibility: hidden;
+  margin-top: 15px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--green);
+  text-transform: uppercase;
+}
+
+span.alert.show {
+  visibility: visible;
+}
