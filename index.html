@@ -1,72 +1,197 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/227c1d0653.js" crossorigin="anonymous"></script>
-    <title>Homepage</title>
-    <link rel="icon" type="image/x-icon" href="icons/homepage.png">
-    <link  defer rel="stylesheet" href="style/style.css">
-    <script defer src="script.js"></script>
-</head>
-<body>
-    
-    <nav id="nav-bar">
-        <div id="themeSwitch">
-            <label>
-                <input type="checkbox" name="toggle-theme" id="toggle-theme">
-                <span class="switch">
-                    <i class="fas fa-sun"></i>
-                    <i class="fas fa-moon"></i>
-                </span>
-            </label>
-        </div>
-        <ul class="pagess" id="menu">
-            <li><a href="index.html" class="pages">Home</a></li>
-            <li><a href="pages/projects.html" class="pages">Projects</a></li>
-            <li><a href="pages/about.html" class="pages">About</a></li>
-            <li><a href="pages/contact.html" class="pages">Contact</a></li>
-        </ul>
-        <a href="javascript:void(0);" class="menuBars" onclick="menuChange();">
-            <i id="menuButton" class="fa-solid fa-bars"></i>
-        </a>
-    </nav>
-    
-    
-    
-    <section id="main">
+<html lang="en" data-theme="light">
 
-        <h1>Leonardo Nunes</h1>
-        <p>Frontend Developer</p>
-        <!-- <p>Lorem ipsum dolor sit amet. Rem suscipit ratione est repellat nemo ut quas enim. Quo consectetur totam et aspernatur adipisci aut sint esse est laboriosam veniam sed Quis autem! Et veniam iure ut quia dolores non perspiciatis deleniti ut explicabo nulla qui reprehenderit tempora qui enim enim non similique rerum. Sit quia corporis vel nobis voluptate non quam molestias et eius nostrum hic magnam odio et fugiat dolores! Eos repellendus illo est dolorem atque ut doloremque placeat qui consequatur iste At consequuntur nemo? Rem vero enim in nesciunt alias ut cupiditate alias eos molestias ipsa id expedita molestiae in voluptatem assumenda. Est saepe quia qui sunt laboriosam sed deserunt vitae est totam sunt et voluptate atque sit iusto omnis. Qui quasi nihil quo rerum voluptatem non ducimus omnis quo quisquam ullam et aliquid neque aut suscipit quam qui unde culpa. Qui dicta officiis ab autem laboriosam aut quia nisi hic repudiandae impedit. 33 facere cupiditate est galisum debitis hic facere officia non dolores illo. In magni nesciunt ab excepturi minima a ullam illo et quia sint rem porro repellendus. </p>
-        <p>Lorem ipsum dolor sit amet. Rem suscipit ratione est repellat nemo ut quas enim. Quo consectetur totam et aspernatur adipisci aut sint esse est laboriosam veniam sed Quis autem! Et veniam iure ut quia dolores non perspiciatis deleniti ut explicabo nulla qui reprehenderit tempora qui enim enim non similique rerum. Sit quia corporis vel nobis voluptate non quam molestias et eius nostrum hic magnam odio et fugiat dolores! Eos repellendus illo est dolorem atque ut doloremque placeat qui consequatur iste At consequuntur nemo? Rem vero enim in nesciunt alias ut cupiditate alias eos molestias ipsa id expedita molestiae in voluptatem assumenda. Est saepe quia qui sunt laboriosam sed deserunt vitae est totam sunt et voluptate atque sit iusto omnis. Qui quasi nihil quo rerum voluptatem non ducimus omnis quo quisquam ullam et aliquid neque aut suscipit quam qui unde culpa. Qui dicta officiis ab autem laboriosam aut quia nisi hic repudiandae impedit. 33 facere cupiditate est galisum debitis hic facere officia non dolores illo. In magni nesciunt ab excepturi minima a ullam illo et quia sint rem porro repellendus. </p>
-        <p>Lorem ipsum dolor sit amet. Rem suscipit ratione est repellat nemo ut quas enim. Quo consectetur totam et aspernatur adipisci aut sint esse est laboriosam veniam sed Quis autem! Et veniam iure ut quia dolores non perspiciatis deleniti ut explicabo nulla qui reprehenderit tempora qui enim enim non similique rerum. Sit quia corporis vel nobis voluptate non quam molestias et eius nostrum hic magnam odio et fugiat dolores! Eos repellendus illo est dolorem atque ut doloremque placeat qui consequatur iste At consequuntur nemo? Rem vero enim in nesciunt alias ut cupiditate alias eos molestias ipsa id expedita molestiae in voluptatem assumenda. Est saepe quia qui sunt laboriosam sed deserunt vitae est totam sunt et voluptate atque sit iusto omnis. Qui quasi nihil quo rerum voluptatem non ducimus omnis quo quisquam ullam et aliquid neque aut suscipit quam qui unde culpa. Qui dicta officiis ab autem laboriosam aut quia nisi hic repudiandae impedit. 33 facere cupiditate est galisum debitis hic facere officia non dolores illo. In magni nesciunt ab excepturi minima a ullam illo et quia sint rem porro repellendus. </p> -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style/new.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  
+  <link rel="icon" type="image/x-icon" href="icons/homepage.png">
+
+  <script defer src="https://kit.fontawesome.com/227c1d0653.js" crossorigin="anonymous"></script>
+  
+
+  <title>Homepage</title>
+</head>
+
+<body>
+
     
+  <div id="preloader">
+    <p class="loading"><i class="fa-solid fa-spinner"></i></p>
+  </div>
+
+  <div class="top-menu">
+
+    <div class="theme-button">
+      <label>
+        <input type="checkbox" name="toggle-theme" id="toggle-theme">
+        <span class="switch">
+            <i class="fas fa-sun activeTheme"></i>
+            <i class="fas fa-moon activeTheme"></i>
+        </span>
+      </label>
+    </div>
+
+    <div class="menu-links">
+
+      <a class="int-links animation active" href="#about">
+        ABOUT ME
+      </a>
+
+      <a class="int-links animation active" href="#projects">
+        PROJECTS
+      </a>
+
+      <a class="int-links animation active" href="#contact">
+        CONTACT
+      </a>
+
+      <a class="int-links animation active" href="#home">
+        <i class="fa-solid fa-house animation"></i>
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="main-content">
+  
+  <div class="left-side">
+    <div id="socials">
+      <ul class="links">
+          <li><a target="_blank" rel=”noopener” href="https://www.github.com/nsleo" class="links">
+              <i class="fa fa-brands fa-github"></i>
+          </a></li>
+          <li><a target="_blank" rel=”noopener” href="https://www.linkedin.com/in/nsleo/" class="links">
+              <i class="fa fa-brands fa-linkedin"></i>
+          </a></li>
+          <li><a target="_blank" rel=”noopener” href="https://www.codepen.io/nsleo" class="links">
+            <i class="fa fa-brands fa-codepen"></i>
+          </a></li>
+          <li><a target="_blank" rel=”noopener” href="https://twitter.com/Leotelho" class="links">
+              <i class="fa fa-brands fa-twitter"></i>
+          </a></li>
+          <li>
+            <a target="_blank" rel=”noopener” href="https://www.instagram.com/n.s.leo/" class="links">
+              <i target="_blank" rel=”noopener” class="fa fa-brands fa-instagram"></i>
+            </a>
+          </li>
+      </ul>
+  </div>
+  </div>
+
+  <div class="container">
+
+    <section id="home" class="hidden">
+
+      <div class="hello">
+
+        <p class="small">Hi, my name is</p>
+        <p class="big">Leonardo Nunes<span>,</span></p>
+        <p class="medium">I build a better world with front-end in the web</p>
+        
+      </div>
+
+    </section>
+  
+
+    <section id="about" class="hidden">
+
+      <div class="photo">
+        <img src="/resources/euredondo.png" alt="">
+      </div>
+
+      <div class="aboutme">
+
+        <p>
+            Systems Analysis and Development student, I believe that constant 
+            learning is essential in technology. 
+            I currently focus on front-end 
+            development and the main web technologies. 
+            I believe that technology can build a better world, and with it I can 
+            be a part of it.
+        </p>
+        
+        <div class="smile">
+          <p>
+              :)
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+  
+
+    <section id="projects" class="hidden">
+
+      <div class="projects">
+
+        
+        <div>
+          <h3>Here are some things i did:</h3>
+          <p>my 
+            <a class="ext-links" target="_blank" rel=”noopener” href="https://www.codepen.io/nsleo"><strong>CodePen</strong></a>
+             profile
+          </p>
+          <p>This page isn't only my portfolio page, but the page i use to test new Vanilla and Frameworks JS functionalities i learn or find out, that i share in my CodePen profile.</p>
+          
+          <li><a href="index.html" class="pages">Home</a></li>
+          <li><a href="pages/projects.html" class="pages">Projects</a></li>
+          <li><a href="pages/about.html" class="pages">About</a></li>
+          <li><a href="pages/contact.html" class="pages">Contact</a></li>
+        </div>
+
+        <div>
+        </div>
+        
+        <div>
+        </div>
+        
+        <!-- <a class="ext-links" target="_blank" rel=”noopener” href="./projects/weather app/weather.html">Weather App</a> -->
+        <!-- <a class="ext-links" target="_blank" rel=”noopener” href="../projects/welcomescreen/login.html">Welcome Screen</a> -->
+        <!-- <a target="_blank" rel=”noopener” href="../projects/pingpong/pingpong.html">Ping-Pong</a> -->
+      </div>
+
+    </section>
+  
+
+    <section id="contact" class="hidden">
+      
+      <div class="contactForm">
+
+        <div class="form">
+          <p>Contact me</p>
+          <form action="https://usebasin.com/f/c084ea076368">
+            <input type="text" placeholder="your name">
+            <input type="text" placeholder="your email">
+            <textarea class="field" placeholder="your message"></textarea>
+            <input class="submit" type="submit">
+          </form>
+
+        </div>
+
+      </div>
+
     </section>
 
+  </div>
 
-    <footer id="footer">
-        <div id="socials">
-            <ul class="links">
-                <li><a target="_blank" rel=”noopener” href="https://www.instagram.com/n.s.leo/" class="links">
-                    <i target="_blank" rel=”noopener” class="fa fa-brands fa-instagram"></i>
-                </a></li>
-                <li><a target="_blank" rel=”noopener” href="https://twitter.com/Leotelho" class="links">
-                    <i class="fa fa-brands fa-twitter"></i>
-                </a></li>
-                <li><a target="_blank" rel=”noopener” href="https://www.linkedin.com/in/nsleo/" class="links">
-                    <i class="fa fa-brands fa-linkedin"></i>
-                </a></li>
-                <li><a target="_blank" rel=”noopener” href="https://www.github.com/nsleo" class="links">
-                    <i class="fa fa-brands fa-github"></i>
-                </a></li>
-            </ul>
-        </div>
-    </footer>
-    
+  <div class="right-side">
+    <a>MY RESUME</a>
+  </div>
+
+  </div>
+
 </body>
+
+
+<script defer src="app.js"></script>
+
 </html>
