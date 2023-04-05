@@ -17,6 +17,19 @@ const hiddenElements = document.querySelectorAll('.hidden')
 hiddenElements.forEach((el) => observer.observe(el))
 
 
+// socials hide
+
+document.addEventListener("scroll", () => {
+  if (!document.querySelector("section#home").classList.contains('show')) {
+    document.querySelector("div#socials").classList.remove('showLeft')
+    document.querySelector("div#socials").classList.add('hiddenLeft')
+  } else if (document.querySelector("section#home").classList.contains('show')) {
+    document.querySelector("div#socials").classList.add('showLeft')
+    document.querySelector("div#socials").classList.remove('hiddenLeft')
+  }
+})
+
+
 // link selected
 
 
@@ -116,7 +129,7 @@ themeSwitch.addEventListener("change", () => {
     // sun.classList.remove("activeTheme")
     // moon.classList.add("activeTheme")
   }
-  console.log(localStorage.getItem('data-theme'))
+  // console.log(localStorage.getItem('data-theme'))
 })
 
 // get final info and apply
