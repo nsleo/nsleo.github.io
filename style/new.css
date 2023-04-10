@@ -536,6 +536,11 @@ div.linksDiv li.last {
   border: 0;
 }
 
+div.linksDiv ul.links li:hover {
+  background: var(--highlightLight);
+  /* cursor: pointer; */
+}
+
 div.form {
   /* border: 1px solid var(--highlight); */
   width: 100%;
