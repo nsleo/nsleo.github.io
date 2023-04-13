@@ -3,10 +3,14 @@
   padding: 0;
   outline: none;
   list-style: none;
-  border: 0;
+  border: none;
   text-decoration: none;
   color: var(--white-main);
   font-family: sans-serif;
+}
+
+button {
+  background: transparent;
 }
 
 :root {
@@ -19,6 +23,9 @@
   --pink: #AE2997;
   --purple: #8062C6;
   --blue: #509BF5;
+  --strong-blue: #4F1DF2;
+  --grey: #b6b6b6;
+  --grey-darker: #7e7e7e;
 }
 
 html {
@@ -27,10 +34,15 @@ html {
 
 div.container {
   width: 100vw;
-  height: 93vh;
+  height: 100%;
   display: grid;
   grid-auto-columns: 1fr 20px;
   grid-template-columns: 220px 1fr; 
+  grid-template-rows: 94vh 6vh;
+  grid-template-areas: 
+  "i1 i2"
+  "i3 i3"
+  ;
 }
 
 section.side {
@@ -58,6 +70,16 @@ svg#logoo {
   width: 76.5%;
 }
 
+div.side-bar {
+  /* height: 100%; */
+}
+
+div.navSection {
+  position: relative;
+  height: 89vh;
+  /* height: 793px; */
+}
+
 div.one {
   margin-top: 30px;
   margin-bottom: 45px;
@@ -75,8 +97,80 @@ a.navItem {
   gap: 17px;
 }
 
-div.two {
-  /* margin-top: 40px; */
+div.plusSvg, div.plusSvg div {
+  background: var(--white-main);
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.plusSvg svg {
+  fill: var(--background-lighter);
+}
+
+div.loveSvg {
+  background: linear-gradient(145deg, var(--strong-blue), var(--white-main));
+}
+
+div.loveSvg, div.loveSvg div {
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.loveSvg div {
+  height: 100%;
+  width: 100%;
+}
+
+div.loveSvg svg {
+  fill: var(--white-main);
+}
+
+div.bottom {
+  /* position: absolute; */
+  /* bottom: 23px; */
+  margin-top: 50vh;
+  height: 82px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 24px;
+}
+
+div.bottom span {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--grey);
+}
+
+div.language button {
+  gap: 5px;
+  padding: 0px;
+  width: 106px;
+  height: 32px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid var(--grey-darker);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.bla {
+  /* height: 90px; */
+  width: 100%;
+  background-color: #8062C6;
+  bottom: 0;
+  grid-area: i3;
 }
 
 section.main {
@@ -87,10 +181,4 @@ div.header {
   height: 58px;
   width: 100%;
   background: var(--transparent-dark);
-}
-
-div.footer {
-  width: 100vw;
-  min-height: 7vh;
-  background: linear-gradient(90deg, var(--pink), var(--purple), var(--blue));
 }
