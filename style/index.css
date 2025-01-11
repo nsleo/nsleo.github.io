@@ -429,13 +429,13 @@ section#about img {
 /* ROUND PHOTO */
 
 img {
-  filter: blur(10px);
+  /*filter: blur(10px);*/
   width: 350px;
   clip-path: circle();
   /* filter: grayscale(30%); */
   overflow: hidden;
   /* background: grey; */
-  border: 5px solid var(--highlight);
+  border: 3px solid var(--highlight);
   border-radius: 50%;
   /* transition: 0.4s ease; */
 }  
